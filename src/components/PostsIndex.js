@@ -2,11 +2,11 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { Link } from 'react-router'
 
-import { fetchPosts } from '../actions/index'
+import { fetchAllPosts } from '../actions/index'
 
 class PostsIndex extends Component {
   componentWillMount() {
-    this.props.fetchPosts()
+    this.props.fetchAllPosts()
   }
 
   renderPosts() {
@@ -22,7 +22,7 @@ class PostsIndex extends Component {
     })
   }
 
-  render() {
+render() {
     return (
       <div>
         <div className="text-xs-right">
@@ -43,4 +43,4 @@ function mapStateToProps(state) {
   return { posts: state.posts.all }
 }
 
-export default connect(mapStateToProps, {fetchPosts})(PostsIndex)
+export default connect(mapStateToProps, {fetchAllPosts})(PostsIndex)
