@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 
-import { Greeting } from '../routes'
+import { Routes } from '../routes'
 
 export default class App extends Component {
   render() {
